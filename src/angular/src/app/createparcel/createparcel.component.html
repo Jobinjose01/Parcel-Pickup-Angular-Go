@@ -1,0 +1,51 @@
+<div class="container">
+  <mat-card>
+    <h1>
+      <mat-card-title translate>APP_NAME</mat-card-title>
+    </h1>
+    <mat-card-content>
+      
+       <form (ngSubmit)="pickup()" [formGroup]="pickupForm" novalidate>
+        <div class="login-error" [hidden]="!error || isLoading" translate>{{error}}</div>
+        <br />
+        <div class="login-fields" fxLayout="column">
+          <mat-form-field>
+            <input
+              type="text"
+              matInput
+              formControlName="pickup_address"
+              autocomplete="pickup_address"
+              [placeholder]="'Pickup Address' | translate"
+              required
+            />
+            <mat-error *ngIf="pickupForm.controls.pickup_address.invalid && pickupForm.controls.pickup_address.touched">
+              <span translate>Pickup address is required</span>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              type="text"
+              matInput
+              formControlName="delivery_address"
+              autocomplete="delivery_address"
+              [placeholder]="'Delivery Address' | translate"
+              required
+            />
+            <mat-error *ngIf="pickupForm.controls.delivery_address.invalid && pickupForm.controls.delivery_address.touched">
+              <span translate>Delivery address is required</span>
+            </mat-error>
+          </mat-form-field>
+          
+          <br />
+
+          <button mat-raised-button color="primary" class="my-button-class" type="submit" [disabled]="pickupForm.invalid || isLoading">           
+            <span translate>Create</span>
+          </button>
+        </div>
+      </form>
+
+    </mat-card-content>
+  </mat-card>
+</div>
+
+     

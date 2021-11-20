@@ -1,0 +1,68 @@
+version: '3'
+
+networks:
+  angulargo:
+
+services:
+  site:
+    build:
+      context: .
+      dockerfile: nginx.dockerfile
+    container_name: angulargo_nginx
+    ports:
+      - 88:80
+    volumes:
+      - ./src/angular/dist/:/var/www/html:delegated
+    depends_on:
+      - go
+      - mysql
+      - redis
+      - npm
+    networks:
+      - angulargo
+  go:
+    build:
+      context: .
+      dockerfile: go.dockerfile
+    container_name: gocontainer
+    ports:
+      - 4000:4000
+    networks:
+      - angulargo
+          
+  mysql:
+    image: mysql:5.7.29
+    container_name: angulargo_mysql
+    restart: unless-stopped
+    tty: true
+    ports:
+      - 3307:3306
+    volumes:
+      - ./mysql_storage:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: pickup_system
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    networks:
+      - angulargo
+
+  npm:
+    build:
+      context: .
+      dockerfile: npm.dockerfile
+    container_name: angulargo_npm
+    ports:
+      - 3000:3000
+    networks:
+      - angulargo
+
+  redis:
+    image: redis:alpine
+    container_name: angulargo_redis
+    ports:
+      - 6379:6379
+    networks:
+      - angulargo

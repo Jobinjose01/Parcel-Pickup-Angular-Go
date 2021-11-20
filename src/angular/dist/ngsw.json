@@ -1,0 +1,85 @@
+{
+  "configVersion": 1,
+  "timestamp": 1637393503128,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/346.45cc88b7e104c0061371.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.3fad61fee59fe69b7e1b.js",
+        "/manifest.webmanifest",
+        "/polyfills.9d5c7b544b6bfda654e6.js",
+        "/runtime.bda205367452c4d16176.js",
+        "/styles.763011725f74082b5677.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/MaterialIcons-Regular.1811d381e9d3e8334394.woff",
+        "/MaterialIcons-Regular.45c4a4612e18a3255f51.ttf",
+        "/MaterialIcons-Regular.56395d5d012de45e4955.eot",
+        "/MaterialIcons-Regular.fa3334fe030aed8470dd.woff2",
+        "/apple-touch-icon.png",
+        "/assets/custom.js",
+        "/assets/ngx-rocket-logo.png",
+        "/assets/ngx-rocket-logo@192.png",
+        "/assets/socket.io.js"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/346.45cc88b7e104c0061371.js": "1cdc5403956b8c736b16b2525b433f0872e81a4b",
+    "/MaterialIcons-Regular.1811d381e9d3e8334394.woff": "fd35aef76e3df58554d92457fb41f0f6a5dd4f01",
+    "/MaterialIcons-Regular.45c4a4612e18a3255f51.ttf": "ab5cb381b64844e1ae426cde4064074fac76c567",
+    "/MaterialIcons-Regular.56395d5d012de45e4955.eot": "da7bf13623178411bd7960b7c2e6ff8767ceac39",
+    "/MaterialIcons-Regular.fa3334fe030aed8470dd.woff2": "0bec0581767ccb3256ca805b1904031ac0147f07",
+    "/apple-touch-icon.png": "229df2094cc590088de00ea97a1eb4e4493101d2",
+    "/assets/custom.js": "df1b2bfc5a6ff86b7387a57b7219f26fe93f3709",
+    "/assets/ngx-rocket-logo.png": "0ac53fd27406fe5a36e68285315fb0012e54058e",
+    "/assets/ngx-rocket-logo@192.png": "461b730f9c6dc818f8af9acbe62dfde24dc02d7a",
+    "/assets/socket.io.js": "a99a7d00ba3bf2b230705078a654ee3778ebfa91",
+    "/favicon.ico": "b65083d46bbf63692d5d2cdd69622e6d7ecae317",
+    "/index.html": "b70864ac6d15171a831a116285ccf22990e8305f",
+    "/main.3fad61fee59fe69b7e1b.js": "54ee74e3ade860eb27e0133c1da32f02776a5db9",
+    "/manifest.webmanifest": "4bcebab4f9139d9dfe9e16e2332756bb5b4d3732",
+    "/polyfills.9d5c7b544b6bfda654e6.js": "5004919b50e575eafc891a12c891cf62f3ec815d",
+    "/runtime.bda205367452c4d16176.js": "c0cb7ae71a7e53e4bc640e8f8fc48c5f8d5ec94d",
+    "/styles.763011725f74082b5677.css": "c385fd490315523bce72f78ed72207dc3bb5344f"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
