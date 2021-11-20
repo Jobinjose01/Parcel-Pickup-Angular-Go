@@ -3,7 +3,7 @@
 This app have two user groups senders and bikers , Senders can create pickup required and bikers can accept pickup and deliver.
 This same application is available as PHP Laravel + Angular [here](https://github.com/Jobinjose01/Parcel-Pickup-Angular-Laravel)
 
-You have to import the given sql file for the Database , once the docker is up you can access the mysql db with `127.0.0.1:3307` and `root` as username and password 
+You have to import the given [SQL](https://github.com/Jobinjose01/Parcel-Pickup-Angular-Go/blob/master/db.sql) file for the Database , once the docker is up you can access the mysql db with `127.0.0.1:3307` and `root` as username and password 
 
 Already created 5 senders and 10 bikers , You can create and manage user roles from this admin panel if required.
 
