@@ -10,7 +10,7 @@ services:
       dockerfile: nginx.dockerfile
     container_name: angulargo_nginx
     ports:
-      - 88:80
+      - 81:80
     volumes:
       - ./src/angular/dist/:/var/www/html:delegated
     depends_on:
